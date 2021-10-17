@@ -35,15 +35,15 @@ function App() {
     };
     // console.log(requestOptions.body);
     fetch(API_ENDPOINT, requestOptions)
-        .then(response => response.text())
-        .then((data) => {
-          console.log(data);
-          const rotas = JSON.parse(data).rotations;
-          setRotations(rotas);
-        })
-        .catch((error) => {
-          console.warn(error);
-        });
+      .then(response => response.text())
+      .then((data) => {
+        console.log(data);
+        const rotas = JSON.parse(data).rotations;
+        setRotations(rotas);
+      })
+      .catch((error) => {
+        console.warn(error);
+      });
 	};
 
   const showFile = async (file) => {
@@ -66,6 +66,7 @@ function App() {
 
 	return(
    <div className="App">
+      <div className="sample"><a href="rotation_ragenius_m_o1.json">Sample</a> input.</div>
       <div>
         <input className="file-input" type="file" name="file" onInput={changeHandler} />
       </div>
@@ -90,8 +91,8 @@ function App() {
 			</div>
       <div className="rotas">
       {rotations.map((r, i) => (<div className="rota-url" key={i}><a href={r}>{r.substring(r.indexOf('out/')+4)}</a></div>))}
-      <div className="copyright">&copy; Trog</div>
       </div>
+      <div className="copyright">&copy; Trog</div>
 		</div>
 	)
 }

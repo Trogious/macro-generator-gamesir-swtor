@@ -59,4 +59,11 @@
 .copyright {
   padding-top: 20px;
   padding-bottom: 10px;
+  font-size: x-small;
+}
+
+.sample {
+  text-align: right;
+  font-size: small;
+  padding-right: 60px;
 }
