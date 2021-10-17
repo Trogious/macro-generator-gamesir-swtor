@@ -3,7 +3,7 @@ import './App.css';
 import React, {useState} from 'react';
 
 function App() {
-  const API_ENDPOINT = "https://y0avaeyoy0.execute-api.eu-west-2.amazonaws.com/default/swtorrotation";
+  const API_ENDPOINT = "__API_ENDPOINT_MARKER__";
   const [selectedFile, setSelectedFile] = useState();
   const [fileContents, setFileContents] = useState();
   const [rowCount, setRowCount] = useState(1);
